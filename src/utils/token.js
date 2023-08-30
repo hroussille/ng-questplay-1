@@ -5,7 +5,7 @@ import { GracefulShutdownManager } from "@moebius/http-graceful-shutdown";
 import { mainPath } from "./navigation.js";
 import chalk from "chalk";
 
-const AUTH_CLI_URL = "https://nodeguardians.com/auth/cli";
+const AUTH_CLI_URL = "https://nodeguardians.io/auth/cli";
 
 /**
  * Get the local stored in the local cache
@@ -74,8 +74,6 @@ export async function getToken() {
   let renew = false;
 
   token = await getLocalToken();
-
-  console.log(token);
 
   if (token == null) {
     console.log(chalk.yellow("No token found."));
