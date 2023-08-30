@@ -34,9 +34,9 @@ export async function submitQuest(isSetUpstream) {
     process.exit(1);
   }
 
-  console.log();
-
   const quest = currentWorkingQuest();
+
+  console.log(quest.info);
 
   if (quest.info.type == "ctf") {
     console.log(
